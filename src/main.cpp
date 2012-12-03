@@ -8,6 +8,7 @@
 #include <cppunit/extensions/HelperMacros.h>
 #include <cppunit/BriefTestProgressListener.h>
 #include <cppunit/extensions/TestFactoryRegistry.h>
+#include <cppunit/XmlOutputter.h>
 
 class Test : public CPPUNIT_NS::TestCase
 {
@@ -42,6 +43,10 @@ int main( int ac, char **av )
 	CPPUNIT_NS::TestRunner runner;
 	runner.addTest( CPPUNIT_NS::TestFactoryRegistry::getRegistry().makeTest() );
 	runner.run( controller );
+
+	std::ofstream xmlFileOut("cppunit-reports/cpptestresults.xml");
+	CPPUNIT_NS::XmlOutputter xmlOut(&result, xmlFileOut);
+	xmlOut.write();
 
 	return result.wasSuccessful() ? 0 : 1;
 }

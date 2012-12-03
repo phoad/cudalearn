@@ -1,3 +1,4 @@
-!build.bat
 *
+!cppunit-reports
 !.gitignore
+!build.bat
