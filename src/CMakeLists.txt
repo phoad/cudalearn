@@ -10,11 +10,11 @@ SET(CMAKE_BUILD_TYPE "DEBUG")
 #FIND_PACKAGE(CppUnit)
 
 INCLUDE_DIRECTORIES(
-	"C:/phoad/development/libraries/cppunit/include"
+#	"C:/phoad/development/libraries/cppunit/include"
 )
 
 LINK_DIRECTORIES(
-	"C:/phoad/development/libraries/cppunit/lib"
+#	"C:/phoad/development/libraries/cppunit/lib"
 )
 
 FILE(GLOB CPP_FILES *.cpp)
@@ -23,5 +23,5 @@ FILE(GLOB CPP_FILES *.cpp)
 ADD_EXECUTABLE(${target} ${CPP_FILES})
 
 TARGET_LINK_LIBRARIES(${target} 
-	cppunit
+#	cppunit
 	)

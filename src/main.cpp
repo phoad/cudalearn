@@ -1,3 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+	return EXIT_SUCCESS;
+}
+
+/* I HAVE DECIDED TO USE GOOGLE TEST..
 //--- Hello, World! for CppUnit
 
 #include <iostream>
@@ -50,3 +59,4 @@ int main( int ac, char **av )
 
 	return result.wasSuccessful() ? 0 : 1;
 }
+*/
